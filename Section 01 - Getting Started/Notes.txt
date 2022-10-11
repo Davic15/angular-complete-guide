@@ -1,0 +1,28 @@
+What is Angular?
+    Angular is a JavaScript Framework which allows you to create
+    reactive Single-Page-Applications (SPAs).
+
+    A single HTML file with different pieces of code that react to the
+    user activity.
+
+    The url change, but the page never reloads. We are changing the currently
+    loaded page.
+
+Angular Versioning
+    AngularJS (Angular 1).
+    Angular 2 (Complete re-write).
+    Angular 3 (It was skipped).
+    Angular 10, 11, 12, etc (New version every 6 months. Small, incremental, backwards-compatible changes)
+
+    The big difference is between AngularJS (Angular 1) and Angular 2.
+
+    We are going to use Angular 2+;
+
+    From Angular 2, all version are named Angular 2.
+
+Project Setup and First App
+    It used TypeScript, for that it install more packages.
+    ng new my-app --no-strict
+    cd my-app
+
+Editing the First App
