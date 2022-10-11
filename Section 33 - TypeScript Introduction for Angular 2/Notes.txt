@@ -1,0 +1,18 @@
+TypeScript Introduction
+Extending JavaScript
+
+What is TypeScript and Why do we need to use it?
+    TypeScript is a "superset" to JavaScript.
+    The base JavaScript code (all) doesn't change.
+    TypeScript adds static typing to JavaScript.
+    JavaScript on its on is dinamically typed.
+
+Installing and using TypeScript
+    npm install typescript
+    TypeScript doesn't run in the browser, TypeScript should be compiled to JavaScript.
+    In the compilation time we will get errors provided by TypeScript.
+    The compiled code will run in the browser.
+    Even if the TypeScript file has errors, it will create the JavaScript file.
+
+Base Types and primitives
+    

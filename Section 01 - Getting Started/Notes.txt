@@ -65,3 +65,4 @@ Basic Project Setup using Bootstrap for Styling
     We can modify the angular.json to add bootstrap to our project.
     In the developer tools we can see the css file imported.
     In Sources we can see the styles.css with a reference to bootstrap.
+    
