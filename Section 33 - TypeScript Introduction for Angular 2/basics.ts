@@ -94,3 +94,66 @@ const updatedArray = insertAtBeginning(demoArray, -1);
 insertAtBeginning(['a', 'b'], 'd');
 
 //* Classes and Interfaces.
+class Student {
+    //* In TypeScript we can do this, give a type to our properties in advance.
+    //* also we can do it in one line
+    /*firstName: string;
+    lastName: string;
+    age: number;
+    private courses: string[];
+
+    constructor(first: string, last: string, age: number, courses: string[]) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.courses = courses;
+    }*/
+
+    constructor(public firstName: string, public lastName: string, public age: number, private courses: string[]) {
+        //* This is a short hand notation.
+    }
+
+    //* Methods of the class Student.
+    enrol(courseName: string) {
+        this.courses.push(courseName)
+    }
+
+    listCourses() {
+        return this.courses.slice();
+    }
+}
+
+const student = new Student('David', 'Macias', 33, ['Angular']);
+student.enrol('React');
+
+
+//* We can use interfaces to define object types.
+//* interfaces and type are more or less the same.
+//* Interfaces can be implemented by classes.
+interface Human {
+    firstName: string;
+    age: number;
+
+    greet: () => void;
+}
+
+let max: Human;
+
+max = {
+    firstName: 'David',
+    age: 22,
+    greet() {
+        console.log('Hello!');
+    },
+};
+
+
+//* we can implements the interface Human
+//* Interfaces don't act as object types, instead they force us to set up some structure for our classes.
+class Instructor implements Human {
+    firstName: string;
+    age: number;
+    greet() {
+        console.log('Hello!!!!!');
+    }
+}
