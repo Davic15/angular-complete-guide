@@ -30,3 +30,5 @@ Create a new component using the CLI
     ng g c servers
     We will have the new component similar to app component.
     The file servers.component.spec.ts is for testing purposes.
+
+What is DataBinding?
