@@ -1,0 +1,32 @@
+How Angular App gets Loaded and started
+    To modify the basic layout we can code in app.component.html
+    The file served by the server is the index.html (Single Page Application).
+    <app-root></app-root> is the tag where our components will be loaded.
+    The folder app is the root application.
+
+    app.component.ts, we have component decorator, inside we have the selector property with app-root, it is where our component will be loaded.
+
+How is Angular triggered?
+    In the index.html file at the end (using developer tools), some bundles are created with scripts, with our code.
+    The main.ts is the first code to be triggered.
+    In the line bootstrapModule(AppModule), it is imported from AppModule (/app/app.module), this is part of the root component in the folder app (app.module.ts).
+
+Components are Important!
+    Reminder: Angular in the end is a JavaScript framework, changing your DOM (HTML) at runtime!.
+    Components are a key feature in Angular.
+    We can build our app using many components.
+    We have the root component and over this we can add more components.
+    Example: the header can be a component, the main area could be another component, the sidebar could be another component, etc.
+    It allows us to split our application in reusable parts.
+
+Creating a new Component
+    The other components won't be loaded into index.html, it will be loaded into app.component.html
+    Inside src/app we can create our folders with components.
+    Naming convention name.component.extension
+    A component is a TypeScript class.
+
+Create a new component using the CLI
+    ng generate component servers
+    ng g c servers
+    We will have the new component similar to app component.
+    The file servers.component.spec.ts is for testing purposes.
