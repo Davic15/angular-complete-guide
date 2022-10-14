@@ -1,0 +1,19 @@
+Planning the App
+What component will we do?
+    Features
+        Shopping List
+        Recipe Book
+    Component
+        Root
+        Header
+        Shopping
+            Shopping List
+            Shopping List Edit
+        Recipe
+            Recipe List
+            Recipe Item
+            Recipe Detail
+    Model
+        Ingredient
+        Recipe
+        
