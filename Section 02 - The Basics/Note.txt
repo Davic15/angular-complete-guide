@@ -55,3 +55,11 @@ What are directives.
     Directives are instruction in the DOM.
     Example:
     <p appTurnGreen>My green Text</p>
+    We can add the selector inside Directive.
+
+Using nglf to output data conditionally
+    It works like an IF statement.
+
+Enhancing nglf with and Else Condition.
+
+Styling Elements Dynamically with ngStyle
