@@ -32,3 +32,26 @@ Create a new component using the CLI
     The file servers.component.spec.ts is for testing purposes.
 
 What is DataBinding?
+    Databinding = Communication
+    TypeScript code -> Output Data -> Template HTML
+    Output data:
+        String Interpolation {{ data }}
+        Property Binding ([property] = "data")
+    React to (user) events
+        Event Binding ((event) = "expression")
+    Combination of both: Two-way-binding ([ngModel] = "data")
+
+String Interpolation
+
+Property Binding
+
+Property Binding vs String Interpolation
+
+Event Binding
+
+Passing and using data with event binding
+
+What are directives.
+    Directives are instruction in the DOM.
+    Example:
+    <p appTurnGreen>My green Text</p>

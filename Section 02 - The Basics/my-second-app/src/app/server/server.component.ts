@@ -6,10 +6,6 @@
 //* to learn we will use app module.
 //* A module give Angular information about the features about our app.
 
-
-
-
-
 import { Component } from "@angular/core";
 //* Metadata for this class, to tell Angular what to do with this class.
 //* selector: 'any name' unique selector.
@@ -19,5 +15,10 @@ import { Component } from "@angular/core";
     templateUrl: './server.component.html'
 })
 export class ServerComponent {
+    serverId = 10;
+    serverStatus = "offline";
 
+    getServerStatus () {
+        return this.serverStatus;
+    }
 }

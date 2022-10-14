@@ -24,6 +24,7 @@ Project Setup and First App
     It used TypeScript, for that it install more packages.
     ng new my-app --no-strict
     cd my-app
+    ng serve
 
 Editing the First App
     Angular allows to write static HTML code with dynamic things.
