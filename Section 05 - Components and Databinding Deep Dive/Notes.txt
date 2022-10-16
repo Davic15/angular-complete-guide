@@ -1,2 +1,17 @@
 Split an App in different component.
 Can be reusable in different parts.
+
+Property & Event Binding Overview
+    HTML Element (Native Properties and Event).
+    Directives (Custom Properties and Events).
+    Components (Curstom Properties and Events).
+
+Binding To Custom Properties
+    By definition Properties of a component are accesible just fo the component, not for other Components.
+    To make it visible for other components, we need to use a decorator.
+    @Input before the binding.
+
+Assigning an Alias to Custom Properties.
+
+Binding to Custom Events.
+    
