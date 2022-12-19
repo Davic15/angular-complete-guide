@@ -1,4 +1,5 @@
 # Angular - The Complete Guide
+## Section 01: Getting started
 
 ## What is Angular?.
     - Angular is a JavaScript Framework which allows you to create reactive Single-Page-Application (SPAs).
@@ -68,3 +69,5 @@
     - We can modify the angular.json file to add bootstrap to our project.
     - In the developer tools we can see the CSS file imported.
     - In sources (Browser) we can see the styles.css with a reference to Bootstrap.
+    - First we need to add the reference to Boostrap and later our styles.css.
+    - Installation can be done with npm because there is no way to install Boostrap with ng command.
