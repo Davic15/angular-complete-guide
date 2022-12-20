@@ -58,4 +58,89 @@
         - Instead of styleUrl, we need to write style and write out CSS code there.
     
 ## What is Databinding?.
+    - Databinding = Communication.
+    - TypeScript code -> Output Code -> Template HTML.
+    - Output data:
+        - String Interpolation {{ data }}.
+        - Property Binding ([property] = "data").
+    - React to (user) events:
+        - Event Binding ((event) = "expression").
+    - Combination of both: Two-way-binding ([ngModel] = "data").
 
+## String Interpolation.
+    - It goes in the HTML code {{ myVariable}}.
+    - But the variable is defined in the app.component.ts.
+    - We can call methods too that returns a string.
+
+## Property Binding.
+    - Some properties we can handle with Angular.
+    - For Example the disabled attribute we can handle it with property binding.
+        - [disabled]="myVariable".
+        - The myVariable should be an expresion that give us a boolean as result.
+    - It will update dinamically.
+
+## Property Binding vs String Interpolation. 
+    - Property binding can be cast to string (show true or false on the browswer).
+    - If we want to print some data to the screen we should use STRING INTERPOLATION.
+    - If we want to change some property we can use PROPERTY BINDING.
+    - Don't mix them in a bad way.
+
+
+## Event Binding.
+    - To use some events we need to use event binding.
+    - The name of the event goes in between of ().
+    - Example:
+        - (click)="codeToBeExecutedOrMethod"
+
+## Passing and using data with event binding.
+    - When we can call a method we can pass some data, with the $event.
+    - $event gives us access to the event data.
+    - FormsModule is required for two-way-binding.
+        - ngModel directive allows to do two-way-binding.
+
+## Two-Way-Binding.
+    - We can use two way binding with ngModel.
+    - We can update data and display data at the same time.
+        - It will trigger in the input event and update the value of the variable automatically.
+        - Also update the value if this is provided (pre-populated).
+    - Angular provides ngModel.
+
+## Understanding Directives.
+    - Directives are instructions in the DOM (components are a kind of directive).
+        - Angular add the content of this component in this selector.
+        - Components are components with templates.
+    - We can use the directive as an attribute.
+        <p appTurnGreen>Hello</p>
+    - The directives use the Directive key words, and their specific selector.
+
+## Using ngIf to Output Data Conditionally.
+    - It works like an If statement.
+    - It is call ngIf Directive.
+    - It is used as an attribute selector.
+    - *ngIf the * is a structural director (add it or not).
+    - It evaluates a boolean expression.
+
+## Enhancing ngIf with an Else Condition.
+    - We need to use a local reference.
+    - Also we need to use ng-template (this is a space in the DOM).
+
+## Styling elements dynamically with ngStyle.
+    - ngIf is an structural directive.
+    - It is better if we use as a property binding.
+    - Attributes directives don't add or remove elements, they only change the element they were placed on.
+    - The ngStyle directive gets an object with key: value pairs.
+        - Style property: value.
+    - The ngStyle accepts style properties like CSS using '', example 'background-color', or like JavaScript example backgroundColor.
+
+## Applying CSS classes dynamically with ngClass.
+    - The ngClass allows us to add or delete classes dynamically.
+    - We should use it as a property binding.
+    - Example:
+        - [ngClass]="{className: condition}"
+        - [ngClass]="{online: serverStatus === 'online'}"
+
+## Outputting lists with ngFor
+    - The ngFor directive we can iterate an array of data.
+    - The ngFor is an structural directive.
+    - Example
+        - *ngFor="let localVariable of arrayVariable"
