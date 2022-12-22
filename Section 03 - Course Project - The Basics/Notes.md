@@ -68,4 +68,4 @@
     - Define a variable with ingredients as Ingredient, the model we created before.
 
 ## Adding a shopping list edit section
-    - 
+    - Adding the HTML code.
