@@ -121,7 +121,33 @@
     - We can preserve our old query parameters and keep them, using queryParamsHandling: 'preserve'
 
 ## Redirecting and Wildcard Routes.
-    - 
+    - It works with routes not defined, used for an 404 page.
+    - We can use the redirect, than redirect us to other path.
+    - The ** is the wildcard that catch all path that are wrong.
+        - It should be our last route.
+
+## Outsourcing the Route configuration.
+    - Our routes are taking too much space in your app.module.ts.
+    - We can create a new file for it.
+    - The new file is a new module and we should export it and import it in our app.module.ts file.
+
+## Introduction to Guards.
+    - Code than runs after or before a route is call.
+    - Run code after a path is loaded.
+
+## Protecting Routes with canActivate.
+    - Create a new file and and implements CanActivate
+    - We need to added in the routes files using the CanActivate function.
+
+## Protecting Child (Nested) routes with canActivateChild.
+    - We can use the guadian CanActivateChild.
+    - This protect the whole route, or the child routes.
+
+## Using a fake Auth service.
+    - Visual indication of the login/logout.
+
+## Controlling navigation with canDeactivate.
+    -
 
 
 
