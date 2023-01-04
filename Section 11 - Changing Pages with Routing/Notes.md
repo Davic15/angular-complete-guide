@@ -147,12 +147,20 @@
     - Visual indication of the login/logout.
 
 ## Controlling navigation with canDeactivate.
-    -
+    - Keeping the user in the page to accidentally navigating away.
+    - A guard is always a service.
 
+## Passing static data to a Route.
+    - We can create a new component to handle errors.
+    - Specific error messages and we can reuse the page.
+    - We can reach this component with different data.
+    - We can add data inside the route.
+## Resolving dynamic data with the resolve guard.
+    - We use the new guard inside our route module.
+    - Add it in the route we want.
 
-
-
-    
-
-
-    
+## Understanding location strategies.
+    - Routes are parsed first for the server later for our app.
+    - It should be like 404 page but we need to return our index.
+    - We can use hash in our routes.
+    - It is used when we deploy our page.
