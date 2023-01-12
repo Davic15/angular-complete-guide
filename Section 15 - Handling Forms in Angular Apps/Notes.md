@@ -12,6 +12,7 @@
     - We need to parse the values and work with a JavaScript Object.
         - Use a valid key/value pair to check if our input is valid or not.
 
+# Template-Driven
 ## Template-Driven (TD) vs Reactive Approach.
     - Angular has two approaches to work with forms.
         - Template-Driven (easy way)
@@ -104,3 +105,6 @@
     - We can reset the form, not only the values, the states too.
 
 ## Practice.
+
+# Reactive Approach
+## Reactive Setup
