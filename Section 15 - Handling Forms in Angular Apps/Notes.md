@@ -12,7 +12,7 @@
     - We need to parse the values and work with a JavaScript Object.
         - Use a valid key/value pair to check if our input is valid or not.
 
-# Template-Driven
+# Template-Driven.
 ## Template-Driven (TD) vs Reactive Approach.
     - Angular has two approaches to work with forms.
         - Template-Driven (easy way)
@@ -106,5 +106,32 @@
 
 ## Practice.
 
-# Reactive Approach
-## Reactive Setup
+# Reactive Approach.
+## Reactive Setup.
+    - Setting the Application.
+    - In the reactive approach the form is created programmatically, so we need to first creating in the code.
+    - Angular provides some tools to create in a correct way.
+        - We need to import it in the app.module.ts
+            - ReactiveFormsModule.
+
+## Reactive: Creating a form in Code.
+    - We need to use the same names in our code.
+    - For each FormControl we need to add 2 arguments.
+        - Initial state.
+        - Array of validators (or a single validaror).
+
+## Reactive: Syncing HTML and Form.
+    - Now it is time to sync the code with the template.
+    - We need to set the formGroup in our template, in the form control.
+    - In each input we should add formControlName
+
+## Reactive: Submitting the form.
+    - We need to use ngSubmit directive, in the form tag;
+    - We don't need to get the referece from the template, because we have all we need in the code.
+
+## Reactive: Adding validation.
+    - We can validate and/or configure the inputs in the code.
+    - The second argument is where validators go.
+    - We can pass a single validator or an array of validators.
+
+## Reactive: Getting access to controls.
