@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
       'projectName': new FormControl(null, [Validators.required, CustomValidators.forbiddenProjectNameMethod], CustomValidators.forbiddenProjectNameMethodAsync),
       'projectEmail': new FormControl(null, [Validators.required, Validators.email]),
       'projectStatus': new FormControl('Critical')
-    })
+    });
   }
 
   onSubmit() {
