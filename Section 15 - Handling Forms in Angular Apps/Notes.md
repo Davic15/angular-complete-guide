@@ -135,3 +135,40 @@
     - We can pass a single validator or an array of validators.
 
 ## Reactive: Getting access to controls.
+    - We can't access using ngModel.
+    - we need to use a method using he variable name or path, to see if the value is valid or not.
+        - Using the get helper method.
+        - We can use the same classes.
+
+## Reactive: Grouping Controls.
+    - The path mentioned before, is related to formGroups inside other formGroups.
+    - Works fine for nested forms.
+    - We need to group our controls and add FormGroupName directive and update the path of each control like userData.username.
+
+## Reactive: Arrays of form controls (FormArray).
+    - Add an array of contols.
+    - We need to use FormArray.
+    - It is useful if we want to add a new control or new controls.
+
+## Reactive: Creating custom validators.
+    - A validator is a function to check if the value is ok or not.
+    - It returns true or null.
+        - We can't return false.
+
+## Reactive: Using Error Codes.
+    - Error property in the developer tools is null.
+    - On each individual control Angular adds this error.
+
+## Reactive: Creating a custom async validator.
+    - Validate anything is done mostly in a web server, so we need to wait the response.
+    - We can add the new validator as a third argument, in our email definition.
+
+## Reactive: Reacting to status or value changes.
+    - We have two observables in our form, status and value.
+    - We can use to react to values ot status.
+
+## Reactice: Setting and patching values.
+    - setValue, populate values in our form.
+    - The same with patchValue.
+
+## Assignment.
