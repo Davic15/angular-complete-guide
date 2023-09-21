@@ -8,8 +8,8 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 @NgModule({
   declarations: [
     AppComponent,
-    WarningAlertComponent,
-    SuccessAlertComponent
+    SuccessAlertComponent,
+    WarningAlertComponent
   ],
   imports: [
     BrowserModule
