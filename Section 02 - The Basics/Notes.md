@@ -141,6 +141,8 @@
 
     - We need to use a local reference.
     - Also we need to use ng-template (this is a space in the DOM).
+    - *ngIf="severCreated; noServer".
+    - <ng-template noServer> </ng-template>.
 
 ## Styling elements dynamically with ngStyle.
 
