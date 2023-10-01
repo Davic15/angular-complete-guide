@@ -1,6 +1,4 @@
-# Angular - The Complete Guide
-
-## Section 04: Debugging
+# Section 04: Debugging
 
 ## Understanding Angular Error Messages.
 

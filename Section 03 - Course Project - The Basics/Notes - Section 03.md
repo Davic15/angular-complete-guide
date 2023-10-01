@@ -1,6 +1,4 @@
-# Angular - The Complete Guide
-
-## Section 03: Course Project - The Basics
+# Section 03: Course Project - The Basics
 
 ## Planing the app.
 

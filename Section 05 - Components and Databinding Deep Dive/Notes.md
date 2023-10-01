@@ -1,6 +1,4 @@
-# Angular - The Complete Guide
-
-## Section 05: Components & Databinding Deep Dive
+# Section 05: Components & Databinding Deep Dive
 
 ## Module introduction.
 
@@ -53,11 +51,12 @@
     - This is for communication between components.
     - @Input() send data from the parent to the child component.
     - @Output() send data from child to the parent component.
+    - It can be used in small proyect, but for big ones other approach should be taken.
 
 ## Understading view encapsulation.
 
     - The CSS applied in a component it belongs to that component.
-        - That is not a normal browser behavior, but Angular does it.
+        - This is not the normal browser behavior, but Angular does it.
     - In the developer tools, the selector (name) changed.
     - Angular encapsulates the CSS classes, to make them unique, and don't mix up styles.
         - Angular enforces this behavior to make them unique.
@@ -65,7 +64,7 @@
 ## More on view encapsulation.
 
     - We can override this encapsulation.
-        - In the componenet definition we need to add:
+        - In the component definition we need to add:
             - encapsulation: ViewEncapsulation.None (no view encapsulation, it means styles are globally).
             - encapsulation: ViewEncapsulation.ShadowDom (same result as emulated but with browser than emulate it).
             - encapsulation: ViewEncapsulation.Emulated (default behavior).
@@ -76,7 +75,7 @@
     - It will have a reference to the specific element with all its properties.
         - #serverNameInput.
     - We can use in the template, just in that template.
-        - Not in the ts file.
+        - Not in the .ts file.
 
 ## @ViewChild() in Angular 8+.
 
@@ -110,6 +109,7 @@
         - ngAfterViewInit: called after the component's view (and child views) has been initialized.
         - ngAfterViewChecked: called every time the view (and child views) has been checked.
         - ngOnDestroy: called once the component is about to be destroyed.
+    * ngOnInit will run after the constructor.
 
 ## Seeing lifecycle hooks in action.
 
@@ -119,7 +119,7 @@
     - ngOnChanges
         - ngOnChanges should run first, after the constructor and before ngOnInit.
         - It accepts an argument of type SimpleChanges.
-        - If we change anythin, ngOnInit or the constructor is not called.
+        - If we change anything, ngOnInit or the constructor is not called.
     - ngDocheck
         - It is called in every change.
     - ngAfterContentInit

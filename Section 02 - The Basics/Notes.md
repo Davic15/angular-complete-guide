@@ -1,6 +1,4 @@
-# Angular - The Complete Guide
-
-## Section 02: The Basics
+# Section 02: The Basics
 
 ## How an Angular App gets loaded and started?.
 
