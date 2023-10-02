@@ -25,8 +25,6 @@
 
 ## Injecting the logging service into components.
 
-## Angular depencedy Injector.
-
     - A dependency is something a class of ours will depend on.
     - The dependency injector simply injects this dependency, injects an instance of this class into our component automatically.
     - We need to tell Angular that we require that instance.
@@ -47,7 +45,7 @@
 
 ## Understanding the Hierarchical Injector.
 
-    - Angular dependency injector is an hierarchical injector, it means, if we provide a serive, Angular know how to create an instance of it and for its child components.
+    - Angular dependency injector is an hierarchical injector, it means, if we provide a service, Angular know how to create an instance of it and for its child components.
     - We can provide a service in AppModule, same instance of service is available Application-wide.
     - We can provide a service in AppComponent, same instace of Service is available for all components (but not for other services).
     - We can provide a service in Any other component, same instance of service is available for the component and all its child components.
