@@ -52,13 +52,14 @@
         - It is routerLinkActive="myCSSClass"
     - The default path is always link, but we can routerLinkActiveOptions, to change the configuration.
     - Example:
-        - routerLinkActiveOptions="{exact: true}"
+        - [routerLinkActiveOptions]="{exact: true}"
 
 ## Navigating programmatically.
 
     - Trigger the navigation from our TypeScript file.
     - We can inject the Router.
-        - Use an array witht he nagivate method.
+        - Use an array with the nagivate method.
+        - Example: this.router.navigate(['servers']);
 
 ## Using relative paths in programmatic navigation.
 
@@ -76,10 +77,13 @@
 
     - In our component we can access to our parameters, using the ActivatedRoute.
     - The parameters can be accessed in this way.
+        - Example route: {path: 'users'/:id/:name, component: UsersComponent}
         - this.route.snapshot.params['id'],
             - Where the id is the parameter of the route.
+        - this.route.snapshot.params['name'],
+            - Where the name is the parameter of the route.
     - In our browser we can navigate.
-        - localhost:4200/users/1
+        - localhost:4200/users/1/david
 
 ## Fetching Route parameters reactively.
 
