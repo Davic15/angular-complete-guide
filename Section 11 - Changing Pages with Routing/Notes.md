@@ -116,6 +116,12 @@
 ## Retrieving query parameters and fragments.
 
     - It is the same than before, the same code.
+    - We have two ways to do it.
+        - First (Just displaying data).
+            - this.route.snapshot.queryParams.
+            - this.route.snapshot.fragment
+        - Second (reacting to changes).
+            - this.route.queryParams.subscribe() (this is an observable).
 
 ## Practicing and some common gotchas.
 
@@ -140,6 +146,7 @@
 ## Configuring the handling of query parameters.
 
     - We can preserve our old query parameters and keep them, using queryParamsHandling: 'preserve'
+    - Also we can merge with new ones here.
 
 ## Redirecting and Wildcard Routes.
 
@@ -161,13 +168,14 @@
 
 ## Protecting Routes with canActivate.
 
-    - Create a new file and and implements CanActivate
-    - We need to added in the routes files using the CanActivate function.
+    - Create a new file and and implements canActivate
+    - We need to added in the routes files using the canActivate function.
+    - The code is ran before a route is loaded.
 
 ## Protecting Child (Nested) routes with canActivateChild.
 
     - We can use the guadian CanActivateChild.
-    - This protect the whole route, or the child routes.
+    - This file protects the whole route, or the child routes.
 
 ## Using a fake Auth service.
 
