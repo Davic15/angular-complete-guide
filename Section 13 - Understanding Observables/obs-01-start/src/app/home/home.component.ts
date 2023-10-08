@@ -1,58 +1,69 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { interval, Subscription, Observable } from 'rxjs';
+import { Data } from '@angular/router';
+import { Subscription, interval, Observable } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit, OnDestroy {
-
   private firstObsSubscription: Subscription;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-    /*this.firstObsSubscription = interval(1000).subscribe((count: number) => {
-      console.log(count);
-    });*/
+    // this.firstObsSubscription = interval(1000).subscribe((count) => {
+    //   console.log(count);
+    // });
 
-    //* Custom Observable
-    const customIntervalObservable = Observable.create((observer) => {
+    // Custom observable
+    // observer is the listener
+    // next emits a new value
+    const customIntervalObservable = Observable.create((observer: any) => {
       let count = 0;
       setInterval(() => {
         observer.next(count);
-        //* To handle completion
+
         if (count === 2) {
           observer.complete();
         }
 
-        //* To handle an error
         if (count > 3) {
-          observer.error (new Error('Count is greater 3!.'));
+          observer.error(new Error('Counter is greater than 3'));
         }
         count++;
-      }, 1000)
+      }, 1000);
     });
 
-    //* Operators
-    this.firstObsSubscription = customIntervalObservable.pipe(filter((data) => {
-      return data > 0;
-    }), map((data: number) => {
-      return 'Round: ' + (data + 1);
-    })).subscribe((data: number) => {
-      console.log(data)
-    }, (error) => {
-      console.log(error);
-      alert(error.message);
-    }, () => {
-      console.log('Completed!')
-    })
+    this.firstObsSubscription = customIntervalObservable
+      .pipe(
+        filter((data: number) => {
+          return data > 0;
+        }),
+        map((data: number) => {
+          return 'Round: ' + (data + 1);
+        })
+      )
+      .subscribe(
+        // data handling on the stream.
+        (data: Data) => {
+          console.log(data);
+        },
+        // error handling
+        (error: Error) => {
+          console.log(error);
+          alert(error);
+        },
+        // complete
+        () => {
+          console.log('completed');
+        }
+      );
   }
 
   ngOnDestroy(): void {
     this.firstObsSubscription.unsubscribe();
   }
-
 }
