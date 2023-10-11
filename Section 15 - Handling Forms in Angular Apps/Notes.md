@@ -62,11 +62,13 @@
 
     - In the example we submitted the form by passing the form with ngForm.
     - Other approach could be with @ViewChild (access a local reference).
+    - Could be helpful if we need to access the data earlier than submit it.
 
 ## TD: Adding validation to check user input.
 
     - We can validate the input in the front and back end.
     - If we use Template driven approach, we can add validation only in the template (HTML).
+    - We can add required from the default HTML.
     - Example:
         - required, email (by Angular)
     - There are some build-in validators can we use.
@@ -83,6 +85,9 @@
 ## TD: Outputting validation error messages.
 
     - We can use NgModel to get a reference to a control and check if the data is valid or not.
+    - Example:
+        - #email="ngModel".
+        - *ngIf="email.touched"
 
 ## TD: Set default values with ngModel property binding.
 
@@ -103,7 +108,8 @@
     - Example:
         - ngModelGroup="userData"
     - We can access to the ng classes provided by Angular to check validity.
-    - We can access to the JavaScript object with ngModelGroup
+    - We can access to the JavaScript object with ngModelGroup.
+    - It is applied for the a group and we can work with them.
 
 ## TD: Handling Radio Buttons.
 
@@ -141,12 +147,15 @@
     - For each FormControl we need to add 2 arguments.
         - Initial state.
         - Array of validators (or a single validaror).
+    - We need to give a name of each input.
 
 ## Reactive: Syncing HTML and Form.
 
     - Now it is time to sync the code with the template.
     - We need to set the formGroup in our template, in the form control.
-    - In each input we should add formControlName
+        = Example: <form [formGroup]="singupForm">
+    - In each input we should add formControlName.
+        - Example: <input type="radio" [value]="gender" formControlName="gender" />
 
 ## Reactive: Submitting the form.
 
@@ -155,13 +164,16 @@
 
 ## Reactive: Adding validation.
 
-    - We can validate and/or configure the inputs in the code.
-    - The second argument is where validators go.
-    - We can pass a single validator or an array of validators.
+    -   In the previous approach we used required, but now we can do it different.
+    -   We can validate and/or configure the inputs in the code.
+    -   The second argument is where validators go.
+    -   We can pass a single validator or an array of validators.
 
 ## Reactive: Getting access to controls.
 
     - We can't access using ngModel.
+    - We can access in the HTML.
+        = Example: singupForm.get('username').valid
     - we need to use a method using he variable name or path, to see if the value is valid or not.
         - Using the get helper method.
         - We can use the same classes.
@@ -171,6 +183,7 @@
     - The path mentioned before, is related to formGroups inside other formGroups.
     - Works fine for nested forms.
     - We need to group our controls and add FormGroupName directive and update the path of each control like userData.username.
+        - To group them we need to group them in a container, like a div.
 
 ## Reactive: Arrays of form controls (FormArray).
 
