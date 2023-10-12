@@ -46,11 +46,14 @@
 ## Pure and impure pipes (or: how to fix the filter pipe).
 
     - Angular doesn't re-run the pipe when our data has changed.
-    - Updating arrays or objects doesn't triggerit.
+    - Updating arrays or objects doesn't trigger it.
     - We can add pure: false to our pipe, to recalculate the pipe, but the performance decrease.
 
 ## Understanding the "async" pipe.
 
     - The build-in pipe asyn helps us to work with async data.
+    - Example:
+        - <h2>App Status: {{ appStatus | async }}</h2>
+        - appStatus is a Promise or an observable.
 
 ## Example.
