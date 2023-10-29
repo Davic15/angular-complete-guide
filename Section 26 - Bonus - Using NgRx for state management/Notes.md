@@ -69,3 +69,71 @@
     - Create actions can get another argument.
     - props allows us to attach data to the reducer.
     - In the reducer we have a argument called action, and we can access to the value we defined in the counter.action.ts props
+
+## Handling Actions without createReducer
+
+    - The two functions createReducer and createActions are the way, but we can go for other approach.
+    - We can ask for the action type ([Counter] Increment) and do what we want with the action.
+
+## An Alternative way of defining actions
+    
+    - We can define a class to another way to define an Action.
+    - It is just an idea, but create reducer and create action, should be used.
+
+## Time to Practice: A second Action
+
+    - Follow the same steps to do the decrement.
+
+## Exploring Selectors
+    
+    - Select data from the store.
+    - Selector is a function that could be store in a function.
+    - We can define multiple selectors and modified only here.
+
+## Introducing Effects
+
+    - Side Effect.
+    - What's a side effect?
+        - Anything that is not directly related to an immediate UI update.
+        - HTTP Request, localStorage, Logging to the console.
+        - We should avoid side effects in our reducers because the code there is sync, not async code.
+        * We cannot log to the console in the reducers.
+
+## Install the Effects Package
+    
+    - To install it we need to run ng add @ngrx/effects.
+    - It updastes the app.module.ts.
+
+## Defining a First Effect
+
+    - All files that work for the store can be place in a single file, but it is a good practice to split in different files.   
+    - We can use pipe in the observable and inside pipe we can use ofType (which action we can run code).
+        - ofType accepts actions or the type we defined earlier [Counter] Increase.
+    - tap operator side effect and don't dispatch any other side effect.
+        - When it is done, it does not dispatch another side effect.
+    - If we use tap, we should add another part of the code to tell Angular about to don't dispatch anything else.
+
+## The old @Effect Decorator and Registering Effects
+
+    - The old @Effect was added at the top of the function, but in the newest version not anymore.
+    - We need to add the Injectable decorator to our Effects.
+
+## Using Store Data in Effect
+
+    - withLatestFrom allows to get the latest value that we are working on.
+        - It is placed between ofType and tap.
+
+## Adding a second effect
+
+    - switchMap allows us to switch to a new observable chain.
+    - of allows us to convert into an observable.
+    - To access our data we can use app.component.ts, because it is the first component to run.
+
+## Summary
+
+    - Basic idea about the store and NgRx.
+
+## Getting Started with Reducers 
+
+    - Working in the recipe app, adding store.
+

@@ -1,31 +1,44 @@
 import {
   ActivatedRouteSnapshot,
-  CanActivateFn,
   Router,
   RouterStateSnapshot,
   UrlTree,
 } from '@angular/router';
-import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import {  Injectable } from '@angular/core';
+import {Observable, take} from 'rxjs';
 import { AuthService } from './auth.service';
 import { map } from 'rxjs/operators';
-@Injectable({ providedIn: 'root' })
-export class AuthGuard {
-  static authGuardFn: CanActivateFn = (
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean | UrlTree> => {
-    const router = inject(Router);
-    const authService = inject(AuthService);
+import {Store} from "@ngrx/store";
+import * as fromApp from '../store/app.reducer';
 
-    return authService.user.pipe(
-      map((user) => {
+@Injectable({ providedIn: 'root' })
+export class AuthGuard  {
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private store: Store<fromApp.AppState>
+  ) {}
+
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    router: RouterStateSnapshot
+  ):
+    | boolean
+    | UrlTree
+    | Promise<boolean | UrlTree>
+    | Observable<boolean | UrlTree> {
+    return this.store.select('auth').pipe(
+      take(1),
+      map(authState => {
+        return authState.user;
+      }),
+      map(user => {
         const isAuth = !!user;
         if (isAuth) {
           return true;
         }
-        return router.createUrlTree(['/auth']);
+        return this.router.createUrlTree(['/auth']);
       })
     );
-  };
+  }
 }
