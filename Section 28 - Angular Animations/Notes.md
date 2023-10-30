@@ -19,3 +19,41 @@
 
     - Installing dependencies.
     
+## Animation triggers and state
+
+    - We need to add animations.
+    - Two states are required.
+
+## Switching between states
+
+    - Only changing the state.
+
+## Transitions
+    
+    - We can add transitions from one to another one, and we can animate in miliseconds
+
+## Advanced Transitions
+
+    - We can use <=> to do it in both directions.
+    - The wild card is used to point out to any state.
+
+## Transition Phase
+
+    - We can use style between animations.
+
+## The void state.
+
+    - Void is a reserved state name, for cases when an element is not added to the DOM from the begining.
+
+## Using Keyframes for Animations
+    
+    - Normal KeyFrames than CSS but used in Angular.
+
+## Grouping Transitions
+    
+    - group method we pass an array or animations to run in a sync way.
+
+## Using Animation Callbacks
+
+    - We can define call backs.
+
